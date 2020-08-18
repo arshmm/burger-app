@@ -54,8 +54,12 @@ const fetchIngredientsFailed = (state, action) => {
   return updateObject(state, { error: true });
 };
 //------------------------------------------------------
-const buttonViewer = (state, action) => {
+const buttonRemover = (state, action) => {
   return updateObject(state, { buttonDisplay: false });
+};
+//------------------------------------------------------
+const buttonViewer = (state, action) => {
+  return updateObject(state, { buttonDisplay: true });
 };
 //------------------------------------------------------
 
@@ -73,7 +77,10 @@ const reducer = (state = initialState, action) => {
     case actionTypes.FETCH_INGREDIENTS_FAILED:
       return fetchIngredientsFailed(state, action);
 
-    case actionTypes.BUTTON_VIEWER:
+    case actionTypes.BUTTON_REMOVER:
+      return buttonRemover(state, action);
+
+    case actionTypes.BUTTON_VEIWER:
       return buttonViewer(state, action);
 
     default:

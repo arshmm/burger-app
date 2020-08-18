@@ -48,7 +48,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    buttonShow: () => dispatch(actions.buttonViewer()),
+    buttonShow: () => dispatch(actions.buttonRemover()),
   };
 };
 

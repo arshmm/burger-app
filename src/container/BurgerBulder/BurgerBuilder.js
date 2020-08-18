@@ -16,6 +16,7 @@ class BurgerBuilder extends Component {
   };
   componentDidMount() {
     this.props.onInitIngredients();
+    this.props.buttonViewer();
   }
   updatePurchaseState(ingredients) {
     const sum = Object.keys(ingredients)
@@ -113,6 +114,7 @@ const mapDispatchToProps = (dispatch) => {
     onInitPurchase: () => dispatch(actions.purchaseInit()),
     onSetAuthRedirectPath: (path) =>
       dispatch(actions.setAuthRedirectPath(path)),
+    buttonViewer: () => dispatch(actions.buttenViewer()),
   };
 };
 

@@ -40,8 +40,14 @@ export const initIngredients = () => {
   };
 };
 
-export const buttonViewer = () => {
+export const buttonRemover = () => {
   return {
-    type: actionTypes.BUTTON_VIEWER,
+    type: actionTypes.BUTTON_REMOVER,
+  };
+};
+
+export const buttenViewer = () => {
+  return {
+    type: actionTypes.BUTTON_VEIWER,
   };
 };
